@@ -30,6 +30,4 @@ public class Rectangle extends Shape {
     public float getArea() {
         return sides.get(0) * sides.get(1);
     }
-
-
 }

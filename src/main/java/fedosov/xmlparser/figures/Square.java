@@ -24,5 +24,4 @@ public class Square extends Shape {
     public float getArea() {
         return side*side;
     }
-
 }

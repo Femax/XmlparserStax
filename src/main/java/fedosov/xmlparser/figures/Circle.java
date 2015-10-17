@@ -24,6 +24,4 @@ public class Circle extends Shape {
                 "diameter=" + diameter +
                 '}';
     }
-
-
 }
