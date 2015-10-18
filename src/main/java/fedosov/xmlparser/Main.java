@@ -84,27 +84,14 @@ public class Main {
                         case "circle":
                         case "square":
 
-                            ExecutorService executor = Executors.newFixedThreadPool(1);
-                            final Shape finalCurrentShape = currentShape;
-                            final int finalId = currentShapeId;
-                            final String finalColor = currentShape.getColor();
-                            final float finalArea = currentShape.getArea();
-                            executor.submit(new Runnable() {
-                                public void run() {
-                                    try {
-                                        TimeUnit.SECONDS.sleep(2);
-                                        System.out.println("<i>:" + finalId + "<color>" + finalColor + "-<area>" + finalArea+ "/n");
-                                    } catch (InterruptedException e) {
-                                        System.err.println("task interrupted");
-                                    }
-                                }
-                            });
+                            System.out.println("<i>:" + currentShapeId + "<color>" + currentShape.getColor() + "-<area>" + currentShape.getArea()+ "/n");
+
+
                             break;
                     }
 
             }
-
+            reader.close();
         }
-        reader.close();
     }
 }
